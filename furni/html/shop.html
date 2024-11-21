@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- favicon -->
+    <link rel="icon" href="../favicon_32_32.ico" />
+    <link rel="icon" href="../favicon_32_32.svg" />
+    <!-- <link rel="manifest" href="manifest.webmanifest" /> -->
+    <!--Подключение reset.css для очистки браузера-->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!--Подключение Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--Подключение JS скриптов для работы Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--Подключение кастомных стилей-->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="../img/logo_2.svg" alt="logo" width="120" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link font-comfortaa-bold" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active font-comfortaa-bold"
+                aria-current="page"
+                href="#"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a class="nav-link font-comfortaa-bold" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="btn-img nav-link" href="contact.html">
+                <img src="../img/fav_acc.svg" alt="account" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn-img nav-link" href="contact.html">
+                <img src="../img/fav_cart.svg" alt="cart" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <!-- Использование рядов и колонок -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+        <div class="col">
+          <div class="card">
+            <img src="../img/agatha.jpg" class="card-img-top" alt="..." />
+            <!--Удобнейшая комбинация классов - Flexbox-->
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">6 599 ₽</h3>
+              <p class="card-text" style="color: #0c0c0ca4">
+                Мягкое кресло "Агата"
+              </p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img
+              src="../img/palermo_yellow.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">37 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Кресло-кровать DREAMART "Палермо"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/jenifer.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">23 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Кресло для отдыха SCANDICA "Дженнифер"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/fiesta.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">3 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Журнальный стол "Фиеста-2"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/dubai.png" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">21 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Кресло-кровать "Дубай"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/vega.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">10 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Набор журнальных столов "Vega"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/swoon_lounge.png" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">20 690 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Кресло "Swoon Lounge - Wood Base"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/transformer.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">9 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Журнальный стол "Трансформер"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/tafting.png" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">29 990 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Мягкий диван "Тафтинг"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/spark.png" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">25 590 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Диван "Искра"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/marengo.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">2 799 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Фасад "Маренго" для шкафа</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/horten.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">16 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Кровать SCANDICA "Хортен"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/tokio.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">7 999 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">
+                Кровать двойная "Токио" без подъёмного механизма
+              </p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/oscar.jpg" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">16 790 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">Комод "Оскар-Амели"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../img/nd.png" class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h3 class="card-title">0 ₽</h3>
+              <p class="class="card-text" style="color: #0c0c0ca4"">"Название"</p>
+              <a href="#" class="btn btn-primary w-100">В корзину</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

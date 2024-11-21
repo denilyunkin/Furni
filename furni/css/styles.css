@@ -1,0 +1,78 @@
+/* Подключение внешних шрифтов
+@font-face {
+  font-family: "Hero";
+  src: url("../fonts/Hero-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hero_Bold";
+  src: url("../fonts/Hero-Bold.ttf") format("truetype");
+}
+.font-hero-bold {
+  font-family: "Hero_Bold", sans-serif;
+}
+@font-face {
+  font-family: "Hero_Light";
+  src: url("../fonts/Hero-Light.ttf") format("truetype");
+}
+.font-hero-light {
+  font-family: "Hero_Light", sans-serif;
+}
+body {
+  font-family: "Hero", sans-serif;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.font-comfortaa-light {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+}
+
+.font-comfortaa-bold {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+}
+
+.rounded-img {
+  width: 60%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 0.6em;
+  margin-bottom: 1em;
+}
+
+.colored-container {
+  background-color: #e9e9e9;
+}
+
+/*Модифицирум классы от bootstrap*/
+.btn-primary {
+  font-weight: 700;
+  background-color: #ffdf7d;
+  border-color: #ffdf7d;
+  color: #1b1b1a;
+}
+
+.btn-primary:hover {
+  background-color: #dfc26e;
+  border-color: #dfc26e;
+  color: #0c0c0c;
+}
+
+.btn.btn-primary:active {
+  background-color: #b9a158;
+  border-color: #b9a158;
+  color: #0c0c0c;
+  transform: translateY(0.5px);
+}
+
+.card {
+  min-height: 600px;
+}
