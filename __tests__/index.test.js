@@ -17,10 +17,17 @@ test("На странице есть хотя бы один товар", () => {
   expect(cards.length).toBeGreaterThan(0);
 });
 
-test("У товара есть изображение и цена", () => {
-  const firstCard = dom.window.document.querySelector(".card");
-  const img = firstCard.querySelector("img");
-  const price = firstCard.querySelector(".card-title");
-  expect(img).not.toBeNull();
-  expect(price).not.toBeNull();
+test("карточки товаров должны содержать цены и названия", () => {
+  const cards = dom.window.document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    const price = card.querySelector(".card-title");
+    const name = card.querySelector(".card-text");
+
+    expect(price).toBeTruthy();
+    expect(name).toBeTruthy();
+
+    expect(price.textContent).toMatch(/₽/);
+    expect(name.textContent.trim()).not.toBe("");
+  });
 });
