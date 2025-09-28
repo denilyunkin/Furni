@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npx jest
+        run: npm test
 
   deploy:
     environment:
