@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Онлайн Магазин</title>
+    <style>
+      .product {
+        margin: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      #cart {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Онлайн Магазин</h1>
+
+    <div class="product">
+      <h2>Товар 1</h2>
+      <p>Цена: 100 руб.</p>
+      <button onclick="addToCart('Товар 1')">Добавить в корзину</button>
+    </div>
+
+    <div class="product">
+      <h2>Товар 2</h2>
+      <p>Цена: 200 руб.</p>
+      <button onclick="addToCart('Товар 2')">Добавить в корзину</button>
+    </div>
+
+    <div id="cart">
+      <h2>Корзина</h2>
+      <p>Количество товаров: <span id="itemCount">0</span></p>
+      <ul id="cartItems"></ul>
+    </div>
+
+    <script>
+      let itemCount = 0;
+
+      function addToCart(item) {
+        itemCount++;
+        document.getElementById("itemCount").innerText = itemCount;
+
+        const cartItems = document.getElementById("cartItems");
+        const listItem = document.createElement("li");
+        listItem.innerText = item;
+        cartItems.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
