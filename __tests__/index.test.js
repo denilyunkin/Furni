@@ -1,33 +1,33 @@
 const fs = require("fs");
 const path = require("path");
-const { JSDOM } = require("jsdom");
 
-let dom;
+let html;
 
 beforeAll(() => {
-  const html = fs.readFileSync(
-    path.resolve(__dirname, "../index.html"),
-    "utf8"
-  );
-  dom = new JSDOM(html);
+  html = fs.readFileSync(path.resolve(__dirname, "../index.html"), "utf8");
 });
 
 test("На странице есть хотя бы один товар", () => {
-  const cards = dom.window.document.querySelectorAll(".card");
-  expect(cards.length).toBeGreaterThan(0);
+  const hasCard = html.includes('class="card"');
+  expect(hasCard).toBe(true);
 });
 
-test("карточки товаров должны содержать цены и названия", () => {
-  const cards = dom.window.document.querySelectorAll(".card");
+test("Карточки товаров должны содержать цены и названия", () => {
+  // Ищем все карточки по тегу div с классом card
+  const cardRegex = /<div class="card">([\s\S]*?)<\/div>/g;
+  const cards = html.match(cardRegex);
+
+  expect(cards).not.toBeNull();
+  expect(cards.length).toBeGreaterThan(0);
 
   cards.forEach((card) => {
-    const price = card.querySelector(".card-title");
-    const name = card.querySelector(".card-text");
+    const priceMatch = card.match(/class="card-title">([^<]+)<\/h3>/);
+    const nameMatch = card.match(/class="card-text"[^>]*>([^<]+)<\/p>/);
 
-    expect(price).toBeTruthy();
-    expect(name).toBeTruthy();
+    expect(priceMatch).toBeTruthy();
+    expect(nameMatch).toBeTruthy();
 
-    expect(price.textContent).toMatch(/₽/);
-    expect(name.textContent.trim()).not.toBe("");
+    expect(priceMatch[1]).toMatch(/₽/);
+    expect(nameMatch[1].trim()).not.toBe("");
   });
 });

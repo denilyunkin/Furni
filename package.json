@@ -19,6 +19,7 @@
   "homepage": "https://github.com/denilyunkin/Furni#readme",
   "devDependencies": {
     "jest": "^30.2.0",
-    "jsdom": "^27.0.0"
+    "jest-environment-jsdom": "^30.2.0",
+    "jsdom": "^27.2.0"
   }
 }
